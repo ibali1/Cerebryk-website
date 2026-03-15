@@ -125,7 +125,7 @@
     .about-credentials { margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .credential { display: flex; align-items: flex-start; gap: 10px; font-size: 0.8rem; color: var(--text-soft); line-height: 1.5; }
     .credential-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--steel); flex-shrink: 0; margin-top: 6px; }
-    .about-card { background: var(--navy3); border: 1px solid var(--border); padding: 48px 40px; position: relative; overflow: hidden; }
+    .about-card { background: var(--navy3); border: 1px solid var(--border); overflow: hidden; position: relative; }
     .about-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--steel), var(--steel-light)); }
     .about-card-logo { margin-bottom: 32px; }
     .about-quote { font-family: 'Lora', serif; font-style: italic; font-size: 1.05rem; color: var(--text); line-height: 1.75; margin-bottom: 28px; border-left: 3px solid var(--steel); padding-left: 20px; }
@@ -341,8 +341,8 @@
         <div class="svc-right">
           <p>Once your data is reliable, we map your workflows and identify where manual effort is costing you time and money. We design and implement automation that handles repetitive tasks — data entry, reporting, approvals, notifications — so your team focuses on work that requires human judgment.</p>
           <p>The goal isn't to replace people. It's to stop wasting their time on tasks a system can handle.</p>
-          <div class="svc-tags">
-            <span class="svc-tag">Process Mapping</span><span class="svc-tag">Task Automation</span><span class="svc-tag">Reporting Automation</span><span class="svc-tag">System Integration</span><span class="svc-tag">Workflow Redesign</span>
+          <div class="svc-tags" style="flex-wrap:nowrap;">
+            <span class="svc-tag">Process Mapping</span><span class="svc-tag">Task Automation</span><span class="svc-tag">System Integration</span><span class="svc-tag">Workflow Redesign</span>
           </div>
           <div class="svc-callout">"Automation built on clean data delivers results. Automation built on bad data creates faster problems."</div>
         </div>
@@ -383,36 +383,21 @@
     <div class="about-left reveal">
       <div class="section-label">// About Cerebryk Systems</div>
       <h2>Real industry experience.<br>No buzzwords.</h2>
-      <p>Cerebryk Systems was founded by Ibrahim Al-Ansari — an engineer and program manager with over a decade of hands-on experience across construction, oil &amp; gas, manufacturing, and defense supply chains.</p>
-      <p>Having worked inside complex operations — managing proposals, coordinating cross-functional teams, and navigating real production environments — the patterns that cause operational failure are deeply familiar.</p>
-      <p>Cerebryk was built on a simple belief: the right solution starts with understanding your operation, not selling you a product. That means data and workflow analysis first, tool recommendations second — always.</p>
-      <div class="about-credentials">
-        <div class="credential"><div class="credential-dot"></div>Program &amp; Project Management</div>
-        <div class="credential"><div class="credential-dot"></div>Manufacturing Operations</div>
-        <div class="credential"><div class="credential-dot"></div>Defense &amp; Aerospace Supply Chain</div>
-        <div class="credential"><div class="credential-dot"></div>Oil &amp; Gas Industry</div>
-        <div class="credential"><div class="credential-dot"></div>Proposal &amp; RFP Systems</div>
-        <div class="credential"><div class="credential-dot"></div>AI Tooling &amp; Workflow Automation</div>
-      </div>
+      <p><strong>Cerebryk Systems was founded by Ibrahim Ali — an engineer and project manager with over seven years of experience working in, oil &amp; gas, manufacturing, and defense (aerospace &amp; naval) industry.</strong></p>
+      <p>Throughout his career, Ibrahim has worked in complex operational environments where projects require coordination between engineering teams, operations staff, customers, and suppliers. These experiences provided a firsthand view of how businesses actually run — beyond what most software vendors ever see.</p>
+      <p>Cerebryk Systems was built on a simple belief: <strong>the right solution starts with understanding the operation — not selling a product.</strong> That means analyzing workflows, identifying operational bottlenecks, and understanding how information moves across teams before recommending automation, integrations, or AI tools.</p>
+      <p>The goal is simple: <strong>help operational teams run more efficiently with clearer data, better visibility, and fewer manual processes.</strong></p>
     </div>
     <div class="about-right reveal">
       <div class="about-card">
         <div class="about-card-logo">
-          <svg viewBox="0 0 80 80" fill="none" width="52" height="52">
-            <path d="M40 10 C22 10 8 24 8 40 C8 56 22 70 40 70" stroke="#3A6B9E" stroke-width="8" stroke-linecap="round" fill="none"/>
-            <path d="M40 22 C28 22 18 31 18 40 C18 49 28 58 40 58" stroke="#5A8BBE" stroke-width="5" stroke-linecap="round" fill="none"/>
-            <circle cx="40" cy="40" r="6" fill="#3A6B9E"/>
-            <line x1="40" y1="40" x2="62" y2="22" stroke="#5A8BBE" stroke-width="4" stroke-linecap="round"/>
-            <line x1="40" y1="40" x2="65" y2="44" stroke="#5A8BBE" stroke-width="4" stroke-linecap="round"/>
-            <line x1="40" y1="40" x2="50" y2="62" stroke="#5A8BBE" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="62" cy="22" r="4" fill="#3A6B9E"/>
-            <circle cx="65" cy="44" r="4" fill="#3A6B9E"/>
-            <circle cx="50" cy="62" r="4" fill="#3A6B9E"/>
-          </svg>
+          <img src="ibrahim.jpg" alt="Ibrahim Ali" style="width:100%; height:260px; object-fit:cover; object-position:center top; display:block; margin-bottom:0;"/>
         </div>
-        <p class="about-quote">"Every manufacturer I've worked with had the same problem — valuable data locked in spreadsheets, manual processes eating their team's time, and vendors pitching AI on top of a broken foundation. We fix the foundation first."</p>
-        <div class="about-name">Ibrahim Al-Ansari</div>
+        <div style="padding:32px 40px 40px;">
+        <p class="about-quote">"In many operations, valuable data is locked in spreadsheets, manual processes eat up the team's time, and vendors pitch AI tools on top of a broken foundation. We fix the foundation first."</p>
+        <div class="about-name">Ibrahim Ali</div>
         <div class="about-title">Founder, Cerebryk Systems &middot; Calgary, AB</div>
+        </div>
         <div class="about-deco"></div>
       </div>
     </div>
