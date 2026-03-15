@@ -67,11 +67,11 @@
 
     /* TRUST BAR */
     #trust { background: var(--navy2); padding: 28px 48px; border-bottom: 1px solid var(--border); }
-    .trust-inner { display: flex; align-items: center; gap: 48px; flex-wrap: wrap; }
+    .trust-inner { display: flex; align-items: center; gap: 32px; flex-wrap: nowrap; }
     .trust-label { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-soft); white-space: nowrap; }
     .trust-divider { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
-    .trust-items { display: flex; gap: 40px; flex-wrap: wrap; }
-    .trust-item { font-size: 0.8rem; color: var(--text-soft); display: flex; align-items: center; gap: 8px; }
+    .trust-items { display: flex; gap: 24px; flex-wrap: nowrap; }
+    .trust-item { font-size: 0.74rem; color: var(--text-soft); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
     .trust-item::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--steel); flex-shrink: 0; }
 
     /* SECTIONS */
@@ -283,18 +283,18 @@
   <section id="problem">
     <div class="problem-inner">
       <span class="section-label">// The Real Problem</span>
-      <h2>Your operation runs on data.<br>Most of it isn't working for you.</h2>
+      <h2>Your Manufacturing Data Is Everywhere —<br>But Nowhere Useful.</h2>
       <p>Before any automation or AI can deliver value, your data needs to be accurate, accessible, and structured. Most manufacturing SMEs skip this step — and wonder why their tools don't perform.</p>
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-card-icon">&#x1F4CA;</div>
-          <h4>Spreadsheet Overload</h4>
-          <p>Critical production and quality data scattered across dozens of disconnected spreadsheets.</p>
+          <h4>Spreadsheet Chaos</h4>
+          <p>Production, quality, and inventory data scattered across dozens of spreadsheets — each telling a different story.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-icon">&#x1F6AB;</div>
-          <h4>No Visibility</h4>
-          <p>No single source of truth. Managers make decisions on outdated or incomplete information.</p>
+          <h4>No Real-Time Visibility</h4>
+          <p>Managers are forced to make production decisions using outdated or incomplete data.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-icon">&#x1F504;</div>
@@ -303,8 +303,8 @@
         </div>
         <div class="problem-card">
           <div class="problem-card-icon">&#x26A0;&#xFE0F;</div>
-          <h4>Tools That Don't Talk</h4>
-          <p>ERP, spreadsheets, and shop floor systems that don't integrate — creating errors and rework.</p>
+          <h4>Disconnected Systems</h4>
+          <p>ERP, spreadsheets, and shop-floor systems that don't integrate — creating delays, errors, and rework.</p>
         </div>
       </div>
     </div>
