@@ -188,13 +188,24 @@
       .hero-scroll { display: none; }
       section { padding: 72px 20px; }
       #problem { padding: 56px 20px; }
-      #trust { padding: 20px; }
+      #trust { padding: 16px 20px; overflow-x: hidden; }
+      /* Fix 1: Trust bar — stack vertically on mobile */
+      .trust-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .trust-divider { width: 100%; height: 1px; }
+      .trust-items { flex-wrap: wrap; gap: 12px; }
+      .trust-item { white-space: normal; }
       .service-card { padding: 36px 24px; }
       .process-steps { grid-template-columns: 1fr; gap: 40px; }
       .process-steps::before { display: none; }
       .process-step { padding: 0; }
       .about-credentials { grid-template-columns: 1fr; }
-      .about-card { padding: 32px 24px; }
+      /* Fix 2: About section — stack vertically, prevent overflow */
+      #about { grid-template-columns: 1fr; gap: 40px; padding: 72px 20px; }
+      .about-left { width: 100%; }
+      /* Fix 3: Quote card photo — stack photo on top, text below */
+      .about-card { width: 100%; overflow: hidden; }
+      .about-card > div[style] { flex-direction: column !important; }
+      .about-card img { width: 100% !important; height: 260px !important; object-fit: cover; object-position: center top; }
       .form-row { grid-template-columns: 1fr; }
       footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; gap: 20px; }
       .problem-grid { grid-template-columns: 1fr 1fr; }
@@ -206,6 +217,8 @@
       .btn-primary, .btn-outline { text-align: center; justify-content: center; }
       nav { padding: 14px 16px; }
       .problem-grid { grid-template-columns: 1fr; }
+      .trust-items { gap: 10px; }
+      .trust-item { font-size: 0.72rem; }
     }
   </style>
 </head>
@@ -426,16 +439,16 @@
         </div>
       </div>
       <div class="reveal">
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" action="https://formspree.io/f/xgonlqop" method="POST">
           <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane" required/></div>
-            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith" required/></div>
+            <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Jane" required/></div>
+            <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required/></div>
           </div>
-          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@company.com" required/></div>
-          <div class="form-group"><label>Company</label><input type="text" placeholder="Your company name"/></div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="jane@company.com" required/></div>
+          <div class="form-group"><label>Company</label><input type="text" name="company" placeholder="Your company name" required/></div>
           <div class="form-group">
             <label>Where are you in the journey?</label>
-            <select>
+            <select name="journey" required>
               <option value="" disabled selected>Select the best fit</option>
               <option>Our data is a mess — need to start there</option>
               <option>Data is OK — want to automate workflows</option>
@@ -443,7 +456,7 @@
               <option>Not sure — need a diagnosis</option>
             </select>
           </div>
-          <div class="form-group"><label>Tell us more (optional)</label><textarea rows="4" placeholder="Briefly describe your operation and what's not working..."></textarea></div>
+          <div class="form-group"><label>Tell us more (optional)</label><textarea name="message" rows="4" placeholder="Briefly describe your operation and what's not working..."></textarea></div>
           <button type="submit" class="form-submit">Send Message &#x2192;</button>
         </form>
       </div>
